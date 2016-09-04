@@ -1,6 +1,9 @@
 FROM ubuntu:14.04
 
 MAINTAINER Sudharshan Ravindran <suddir@gmail.com>
+LABEL version="1.0"
+LABEL description="node.js v4.2.3"
+LABEL link="https://hub.docker.com/r/suddi/node/"
 
 RUN apt-get update && apt-get install -y \
     wget

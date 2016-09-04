@@ -1,11 +1,9 @@
-# COMPANY: AfterShip
-# NAME:    Dockerfile
-# AUTHOR:  Sudharshan Ravindran
-# DATE:    2015-09-30
-
 FROM ubuntu:14.04
 
 MAINTAINER Sudharshan Ravindran <suddi@aftership.net>
+LABEL version="1.0"
+LABEL description="node.js v4.2.3 with PDF worker config"
+LABEL link="https://hub.docker.com/r/suddi/worker/"
 
 # PACKAGE MANAGER INSTALLATIONS
 RUN echo "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) multiverse" >> /etc/apt/sources.list
