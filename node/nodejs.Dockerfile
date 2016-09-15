@@ -1,8 +1,8 @@
 FROM ubuntu:14.04
 
 MAINTAINER Sudharshan Ravindran <suddir@gmail.com>
-LABEL version="1.0"
-LABEL description="node.js v4.2.3"
+LABEL version="1.1"
+LABEL description="node.js v4.5.0"
 LABEL link="https://hub.docker.com/r/suddi/node/"
 
 RUN apt-get update && apt-get install -y \
@@ -14,9 +14,9 @@ USER node
 WORKDIR /home/node
 
 # INSTALL NVM, NODE AND NPM
-ENV NODE_VERSION 4.2.3
+ENV NODE_VERSION 4.5.0
 ENV NVM_DIR /home/node/.nvm
-RUN wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh | bash
+RUN wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.31.7/install.sh | bash
 RUN . $NVM_DIR/nvm.sh && \
     nvm install $NODE_VERSION && \
     nvm alias default $NODE_VERSION && \
