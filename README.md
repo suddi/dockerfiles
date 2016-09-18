@@ -1,7 +1,5 @@
 # docker-setup
 
-Dockerfiles for setting up Node.js workers making use of PDF generation libraries: zint.
-
 Find the docker images at: https://hub.docker.com/u/suddi/
 
 ## Usage
