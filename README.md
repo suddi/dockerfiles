@@ -1,5 +1,7 @@
 # docker-setup
 
+[![license](https://img.shields.io/github/license/suddi/dockerfiles.svg?maxAge=2592000)](https://github.com/suddi/dockerfiles/blob/master/LICENSE)
+
 Find the docker images at: https://hub.docker.com/u/suddi/
 
 ## Dockerfiles
