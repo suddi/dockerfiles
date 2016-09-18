@@ -1,16 +1,16 @@
 #!/bin/sh
 
-DOCKER_USER="suddi"
+docker_user="suddi"
 
 if [ -n "$1" ]; then
-    DOCKER_IMAGE=$DOCKER_USER/$1
-    docker build -t $DOCKER_IMAGE -f src/$1.Dockerfile .
+    docker_image=$docker_user/$1
+    docker build -t $docker_image -f src/$1.Dockerfile .
 
     if [ -n "$2" ]; then
-        docker tag $DOCKER_IMAGE $2
+        docker tag $docker_image $2
     fi
 
-    docker push $DOCKER_IMAGE
+    docker push $docker_image
 else
-    echo 'Dockerfile undefined'
+    echo 'ERROR: Docker image undefined'
 fi

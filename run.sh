@@ -1,10 +1,10 @@
 #!/bin/sh
 
-DOCKER_USER="suddi"
+docker_user="suddi"
 
 if [ -n "$1" ]; then
-    DOCKER_IMAGE=$DOCKER_USER/$1
-    docker run -it $DOCKER_IMAGE /bin/bash
+    docker_image=$docker_user/$1
+    docker run -it $docker_image /bin/bash
 else
-    echo 'Docker image undefined'
+    echo 'ERROR: Docker image undefined'
 fi
