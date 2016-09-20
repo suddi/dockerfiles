@@ -2,12 +2,14 @@
 
 [![license](https://img.shields.io/github/license/suddi/dockerfiles.svg?maxAge=2592000)](https://github.com/suddi/dockerfiles/blob/master/LICENSE)
 
+
 Find the docker images at: https://hub.docker.com/u/suddi/
 
 ## Dockerfiles
 
 ### [suddi/worker](https://hub.docker.com/r/suddi/worker/)
 [![suddi/worker](https://img.shields.io/docker/pulls/suddi/worker.svg)](https://hub.docker.com/r/suddi/worker/)
+[![microbadger/worker](https://images.microbadger.com/badges/image/suddi/worker.svg)](https://microbadger.com/images/suddi/worker)
 
 Provides node.js LTS version with `zint`, `libmcrypt` and the following node.js libraries:
 * mocha
@@ -16,6 +18,7 @@ Provides node.js LTS version with `zint`, `libmcrypt` and the following node.js 
 
 ### [suddi/node](https://hub.docker.com/r/suddi/node/)
 [![suddi/node](https://img.shields.io/docker/pulls/suddi/node.svg)](https://hub.docker.com/r/suddi/node/)
+[![microbadger/node](https://images.microbadger.com/badges/image/suddi/node.svg)](https://microbadger.com/images/suddi/node)
 
 Provides node.js LTS version with some commonly used node.js libraries:
 * mocha
