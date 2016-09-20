@@ -30,15 +30,15 @@ Provides node.js LTS version with some commonly used node.js libraries:
 To compile and push one of the docker images found in `src/`, eg. `worker`:
 
 ````
-source ./compile.sh worker
+./actions.sh compile node 4.5.0
 ````
 
 To pull a docker image from DockerHub:
 ````
-source ./pull.sh worker
+./actions.sh pull node
 ````
 
 To run a docker image and enter:
 ````
-source ./run.sh worker
+./actions.sh run node
 ````
