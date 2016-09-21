@@ -1,6 +1,6 @@
 FROM ubuntu:14.04
 
-MAINTAINER Sudharshan Ravindran <suddi@aftership.net>
+MAINTAINER Sudharshan Ravindran <suddi@gmail.com>
 LABEL version="1.1"
 LABEL description="node.js v4.5.0 with PDF worker config"
 LABEL link="https://hub.docker.com/r/suddi/worker/"
