@@ -31,7 +31,7 @@ EOF
 
 validate() {
     if [ $# != $1 ]; then
-        echo "ERROR: Incorrect usage\n"
+        printf "ERROR: Incorrect usage\n"
         display_help
         exit 0
     fi
