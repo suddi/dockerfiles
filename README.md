@@ -1,5 +1,6 @@
 # docker-setup
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/8c74c44bb93240d294a6c093f65c03ce)](https://www.codacy.com/app/suddir/dockerfiles?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=suddi/dockerfiles&amp;utm_campaign=Badge_Grade)
 [![license](https://img.shields.io/github/license/suddi/dockerfiles.svg?maxAge=2592000)](https://github.com/suddi/dockerfiles/blob/master/LICENSE)
 
 
