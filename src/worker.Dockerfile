@@ -1,8 +1,8 @@
 FROM ubuntu:14.04
 
 MAINTAINER Sudharshan Ravindran <suddi@gmail.com>
-LABEL version="1.1"
-LABEL description="node.js v4.5.0 with PDF worker config"
+LABEL version="1.2"
+LABEL description="node.js v6.9.1 with PDF worker config"
 LABEL link="https://hub.docker.com/r/suddi/worker/"
 
 # PACKAGE MANAGER INSTALLATIONS
@@ -42,7 +42,7 @@ USER node
 WORKDIR /home/node
 
 # INSTALL NVM, NODE AND NPM
-ENV NODE_VERSION 4.5.0
+ENV NODE_VERSION 6.9.1
 ENV NVM_DIR /home/node/.nvm
 RUN wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.31.7/install.sh | bash
 RUN . $NVM_DIR/nvm.sh && \
