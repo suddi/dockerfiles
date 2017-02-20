@@ -24,6 +24,7 @@ RUN \
 
 # INSTALL RUN DEPENDENCIES
 	apk add --no-cache --virtual .run-deps \
+		python \
 		glib \
 		libpng \
 		libwebp \
@@ -35,7 +36,7 @@ RUN \
 	curl -SLO "http://www.vips.ecs.soton.ac.uk/supported/current/vips-$VIPS_VERSION.tar.gz" && \
 	tar -xf "vips-$VIPS_VERSION.tar.gz" && \
 	cd "vips-$VIPS_VERSION" && \
-	./configure --without-python --without-gsf && \
+	./configure --without-gsf && \
 	make -j$(getconf _NPROCESSORS_ONLN) && \
 	make install && \
 	cd .. && \
@@ -44,4 +45,3 @@ RUN \
 
 # REMOVE BUILD DEPENDENCIES
 	apk del .build-deps
-
