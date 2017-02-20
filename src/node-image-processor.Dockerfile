@@ -15,7 +15,6 @@ RUN \
 		g++ \
 		gcc \
 		make \
-		glib-dev \
 		libpng-dev \
 		libwebp-dev \
 		libexif-dev \
@@ -25,6 +24,7 @@ RUN \
 # INSTALL RUN DEPENDENCIES
 	apk add --no-cache --virtual .run-deps \
 		python \
+		glib-dev \
 		glib \
 		libpng \
 		libwebp \
@@ -41,7 +41,7 @@ RUN \
 	make install && \
 	cd .. && \
 	rm -Rf "vips-$VIPS_VERSION" && \
-	rm "vips-$VIPS_VERSION.tar.gz" && \
+	rm "vips-$VIPS_VERSION.tar.gz"
 
-# REMOVE BUILD DEPENDENCIES
-	apk del .build-deps
+# NOTE: REMEMBER TO REMOVE BUILD DEPENDENCIES
+# RUN apk del .build-deps
