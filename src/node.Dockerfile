@@ -1,27 +1,28 @@
 FROM ubuntu:14.04
 
 MAINTAINER Sudharshan Ravindran <mail@suddi.io>
-LABEL version="1.3"
-LABEL description="node.js v6.9.5"
-LABEL link="https://hub.docker.com/r/suddi/node/"
+LABEL maintainer="Sudharshan Ravindran <mail@suddi.io>" \
+      version="1.3" \
+      description="node.js on ubuntu" \
+      link="https://hub.docker.com/r/suddi/node/"
 
 # SET VARIABLES
-ENV NODE_VERSION 6.9.5
-ENV USERNAME node
-ENV HOME /home/$USERNAME
-ENV NVM_DIR $HOME/.nvm
-ENV NODE_PATH $NVM_DIR/v$NODE_VERSION/lib/node_modules
-ENV PATH $NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH
+ENV NODE_VERSION="6.9.1" \
+	CONTAINER_USER="node" \
+	HOME_DIR="/home/$CONTAINER_USER" \
+	NVM_DIR="$HOME_DIR/.nvm" \
+	NODE_PATH="$NVM_DIR/v$NODE_VERSION/lib/node_modules" \
+	PATH="$NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH"
 
-RUN \
 # INSTALL NVM, NODE AND NPM
-	apt-get update && \
+RUN apt-get update && \
 	apt-get install --assume-yes \
 		wget && \
 
 # CREATE NODE USER
-	useradd --home $HOME --create-home --user-group --uid 1000 --shell /bin/bash $USERNAME && \
-	cd $HOME && \
+	useradd --home $HOME_DIR --create-home --user-group --uid 1000 --shell /bin/bash $CONTAINER_USER && \
+	cd $HOME_DIR && \
+	mkdir $HOME_DIR/app && \
 
 # INSTALL NVM, NODE AND NPM
 	wget --quiet --output-document - \
@@ -31,11 +32,10 @@ RUN \
     nvm alias default $NODE_VERSION && \
 
 # CHANGE OWNERSHIP TO "node" USER
-    chown -R $USERNAME:$USERNAME $HOME
+    chown -R $CONTAINER_USER:$CONTAINER_USER $HOME_DIR
 
-WORKDIR $HOME
-
+WORKDIR $HOME_DIR
 # NOTE: REMEMBER TO SWITCH TO "node" USER IN EXTENDED DOCKERFILES
 # ie. USER $USERNAME
 
-CMD ['node']
+CMD ["node"]

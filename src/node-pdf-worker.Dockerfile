@@ -1,13 +1,13 @@
 FROM suddi/node:6.9.5
 
 MAINTAINER Sudharshan Ravindran <mail@suddi.io>
-LABEL version="1.3"
-LABEL description="node.js v6.9.5 with PDF worker config"
-LABEL link="https://hub.docker.com/r/suddi/worker/"
+LABEL maintainer="Sudharshan Ravindran <mail@suddi.io>" \
+      version="1.3" \
+      description="node.js with PDF worker setup on ubuntu" \
+      link="https://hub.docker.com/r/suddi/worker/"
 
-RUN \
 # PACKAGE MANAGER INSTALLATIONS
-    echo "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) multiverse" >> /etc/apt/sources.list && \
+RUN echo "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) multiverse" >> /etc/apt/sources.list && \
     apt-get update && apt-get install -y \
         librsvg2-bin \
         poppler-utils \

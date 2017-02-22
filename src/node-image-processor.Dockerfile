@@ -1,16 +1,16 @@
 FROM suddi/node-alpine:0.12.18
 
 MAINTAINER Sudharshan Ravindran <mail@suddi.io>
-LABEL version="1.0"
-LABEL description="node.js v0.12.18 with image processing libs"
-LABEL link="https://hub.docker.com/r/suddi/node-image-processor/"
+LABEL maintainer="Sudharshan Ravindran <mail@suddi.io>" \
+      version="1.0" \
+      description="node.js with image processing libs on alpine-linux" \
+      link="https://hub.docker.com/r/suddi/node-image-processor/"
 
 # SET VARIABLES
-ENV VIPS_VERSION 8.4.5
+ENV VIPS_VERSION=8.4.5
 
-RUN \
 # INSTALL BUILD DEPENDENCIES
-	apk add --no-cache --virtual .build-deps \
+RUN apk add --no-cache --virtual .build-deps \
 		curl \
 		g++ \
 		gcc \
