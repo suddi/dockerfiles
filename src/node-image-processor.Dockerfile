@@ -1,4 +1,4 @@
-FROM suddi/node-alpine:0.12.18
+FROM suddi/node-alpine:4.7.3
 
 MAINTAINER Sudharshan Ravindran <mail@suddi.io>
 LABEL maintainer="Sudharshan Ravindran <mail@suddi.io>" \
@@ -41,8 +41,7 @@ RUN apk add --no-cache --virtual .build-deps \
 	make install && \
 	cd .. && \
 	rm -Rf "vips-$VIPS_VERSION" && \
-	rm "vips-$VIPS_VERSION.tar.gz" && \
+	rm "vips-$VIPS_VERSION.tar.gz"
 
-	apk del .dev-deps
 # NOTE: REMEMBER TO REMOVE BUILD DEPENDENCIES
 # RUN apk del .build-deps
