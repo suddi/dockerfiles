@@ -7,11 +7,11 @@ LABEL maintainer="Sudharshan Ravindran <mail@suddi.io>" \
       link="https://hub.docker.com/r/suddi/node-alpine/"
 
 # SET VARIABLES
-ENV NODE_VERSION="6.9.5" \
+ENV NODE_VERSION="4.7.3" \
     CONTAINER_USER="node" \
-    HOME_DIR="/home/$CONTAINER_USER"
+    HOME_DIR="/home/node"
 
-# INSTALL DEPENDENCIES
+# INSTALL RUNTIME DEPENDENCIES
 RUN apk add --no-cache --virtual .run-deps \
         libstdc++ && \
 
@@ -26,6 +26,11 @@ RUN apk add --no-cache --virtual .run-deps \
         linux-headers \
         make \
         python && \
+
+# INSTALL DEVELOPMENT DEPENDENCIES
+    apk add --no-cache --virtual .dev-deps \
+        git \
+        openssh && \
 
 # CREATE NODE USER
     adduser -D -h $HOME_DIR -u 1000 $CONTAINER_USER && \

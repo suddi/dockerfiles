@@ -8,10 +8,10 @@ LABEL maintainer="Sudharshan Ravindran <mail@suddi.io>" \
 
 # SET VARIABLES
 ENV CONTAINER_USER="py" \
-	HOME_DIR="/home/$CONTAINER_USER" \
-	VIRTUALENV_DIR="$HOME_DIR/virtualenvs" \
+	HOME_DIR="/home/py" \
+	VIRTUALENV_DIR="/home/py/virtualenvs" \
 	VIRTUALENV="runtime" \
-	VIRTUALENV_ACTIVATE="$VIRTUALENV_DIR/$VIRTUALENV/bin/activate"
+	VIRTUALENV_ACTIVATE="/home/py/virtualenvs/runtime/bin/activate"
 
 # CREATE PY USER
 RUN adduser -D -h $HOME_DIR -u 1000 $CONTAINER_USER && \

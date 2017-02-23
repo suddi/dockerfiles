@@ -7,11 +7,11 @@ LABEL maintainer="Sudharshan Ravindran <mail@suddi.io>" \
       link="https://hub.docker.com/r/suddi/node/"
 
 # SET VARIABLES
-ENV NODE_VERSION="6.9.1" \
+ENV NODE_VERSION="6.9.5" \
 	CONTAINER_USER="node" \
-	HOME_DIR="/home/$CONTAINER_USER" \
-	NVM_DIR="$HOME_DIR/.nvm" \
-	NODE_PATH="$NVM_DIR/v$NODE_VERSION/lib/node_modules" \
+	HOME_DIR="/home/node" \
+	NVM_DIR="/home/node/.nvm"
+ENV NODE_PATH="$NVM_DIR/v$NODE_VERSION/lib/node_modules" \
 	PATH="$NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH"
 
 # INSTALL NVM, NODE AND NPM
