@@ -7,7 +7,7 @@ LABEL maintainer="Sudharshan Ravindran <mail@suddi.io>" \
       link="https://hub.docker.com/r/suddi/node-alpine/"
 
 # SET VARIABLES
-ENV NODE_VERSION="4.7.3" \
+ENV NODE_VERSION="6.9.5" \
     CONTAINER_USER="node" \
     HOME_DIR="/home/$CONTAINER_USER"
 
