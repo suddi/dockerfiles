@@ -1,3 +1,5 @@
+# BASE DOCKER IMAGE DOCKERFILE:
+# https://github.com/docker-library/python/blob/ad4706ad7d23ef13472d2ee340aa43f3b9573e3d/2.7/alpine/Dockerfile
 FROM python:2.7.13-alpine
 
 MAINTAINER Sudharshan Ravindran <mail@suddi.io>

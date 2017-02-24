@@ -1,3 +1,5 @@
+# BASE DOCKER IMAGE DOCKERFILE:
+# https://github.com/tianon/docker-brew-ubuntu-core/blob/b6f1fe19228e5b6b7aed98dcba02f18088282f90/trusty/Dockerfile
 FROM ubuntu:14.04
 
 MAINTAINER Sudharshan Ravindran <mail@suddi.io>

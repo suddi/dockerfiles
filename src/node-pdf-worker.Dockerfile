@@ -1,3 +1,5 @@
+# BASE DOCKER IMAGE DOCKERFILE:
+# https://github.com/suddi/dockerfiles/blob/49fc98812d64e4c3556f863d9c617c4bca6002a6/src/node.Dockerfile
 FROM suddi/node:6.9.5
 
 MAINTAINER Sudharshan Ravindran <mail@suddi.io>
