@@ -10,23 +10,38 @@ LABEL maintainer="Sudharshan Ravindran <mail@suddi.io>" \
 
 # SET VARIABLES
 ENV CONTAINER_USER="py" \
-	HOME_DIR="/home/py" \
-	VIRTUALENV_DIR="/home/py/virtualenvs" \
-	VIRTUALENV="runtime" \
-	VIRTUALENV_ACTIVATE="/home/py/virtualenvs/runtime/bin/activate"
+    HOME_DIR="/home/py" \
+    LIBRARY_PATH="/lib:/usr/lib"
+
+# INSTALL BUILD DEPENDENCIES
+RUN apk add --no-cache --virtual .build-deps \
+        gcc \
+        g++ \
+        git \
+        libjpeg-turbo-dev \
+        libmemcached-dev \
+        zlib-dev \
+        zlib \
+        libffi-dev \
+        cyrus-sasl-dev && \
+
+# INSTALL RUN DEPENDENCIES
+    apk add --no-cache --virtual .run-deps \
+        mysql-dev \
+        libmagic \
+        libjpeg-turbo \
+        libmemcached && \
 
 # CREATE PY USER
-RUN adduser -D -h $HOME_DIR -u 1000 $CONTAINER_USER && \
+    adduser -D -h $HOME_DIR -u 1000 $CONTAINER_USER && \
     cd $HOME_DIR && \
-    mkdir -p $VIRTUALENV_DIR && \
     mkdir $HOME_DIR/app && \
 
-    pip install \
-    	virtualenv && \
+    chown -R $CONTAINER_USER:$CONTAINER_USER $HOME_DIR && \
 
-    cd $VIRTUALENV_DIR && \
-    virtualenv $VIRTUALENV && \
+    pip install --no-cache-dir fabric django-sslserver==0.15
 
-    chown -R $CONTAINER_USER:$CONTAINER_USER $HOME_DIR
+# NOTE: REMEMBER TO REMOVE BUILD DEPENDENCIES
+# RUN apk del .build-deps
 
 WORKDIR $HOME_DIR
