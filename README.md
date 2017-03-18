@@ -10,12 +10,19 @@ Find the docker images at: https://hub.docker.com/u/suddi/.
 ### [suddi/node](https://hub.docker.com/r/suddi/node/)
 [![suddi/node](https://img.shields.io/docker/pulls/suddi/node.svg)](https://hub.docker.com/r/suddi/node/)
 [![microbadger/node](https://images.microbadger.com/badges/image/suddi/node.svg)](https://microbadger.com/images/suddi/node)
+[![](https://images.microbadger.com/badges/version/suddi/node:4.2.3.svg)](https://microbadger.com/images/suddi/node:4.2.3)
+[![](https://images.microbadger.com/badges/version/suddi/node:4.5.0.svg)](https://microbadger.com/images/suddi/node:4.5.0)
+[![](https://images.microbadger.com/badges/version/suddi/node:6.9.1.svg)](https://microbadger.com/images/suddi/node:6.9.1)
+[![](https://images.microbadger.com/badges/version/suddi/node:6.9.5.svg)](https://microbadger.com/images/suddi/node:6.9.5)
 
 Provides node.js LTS versions on ubuntu.
 
 ### [suddi/worker](https://hub.docker.com/r/suddi/worker/)
 [![suddi/worker](https://img.shields.io/docker/pulls/suddi/worker.svg)](https://hub.docker.com/r/suddi/worker/)
 [![microbadger/worker](https://images.microbadger.com/badges/image/suddi/worker.svg)](https://microbadger.com/images/suddi/worker)
+[![](https://images.microbadger.com/badges/version/suddi/worker:4.5.0.svg)](https://microbadger.com/images/suddi/worker:4.5.0)
+[![](https://images.microbadger.com/badges/version/suddi/worker:6.9.1.svg)](https://microbadger.com/images/suddi/worker:6.9.1)
+[![](https://images.microbadger.com/badges/version/suddi/worker:6.9.5.svg)](https://microbadger.com/images/suddi/worker:6.9.5)
 
 Provides node.js LTS versions with `zint`, `libmcrypt` and the following node.js libraries:
 * `mocha`
@@ -24,11 +31,18 @@ Provides node.js LTS versions with `zint`, `libmcrypt` and the following node.js
 
 ### [suddi/node-alpine](https://hub.docker.com/r/suddi/node-alpine/)
 [![suddi/node-alpine](https://img.shields.io/docker/pulls/suddi/node-alpine.svg)](https://hub.docker.com/r/suddi/node-alpine/)
+[![microbadger/worker](https://images.microbadger.com/badges/image/suddi/node-alpine.svg)](https://microbadger.com/images/suddi/node-alpine)
+[![](https://images.microbadger.com/badges/version/suddi/node-alpine:0.12.18.svg)](https://microbadger.com/images/suddi/node-alpine:0.12.18)
+[![](https://images.microbadger.com/badges/version/suddi/node-alpine:4.7.3.svg)](https://microbadger.com/images/suddi/node-alpine:4.7.3)
+[![](https://images.microbadger.com/badges/version/suddi/node-alpine:6.9.5.svg)](https://microbadger.com/images/suddi/node-alpine:6.9.5)
 
 Provides node.js LTS versions on alpine-linux.
 
 ### [suddi/node-image-processor](https://hub.docker.com/r/suddi/node-image-processor/)
 [![suddi/node-image-processor](https://img.shields.io/docker/pulls/suddi/node-image-processor.svg)](https://hub.docker.com/r/suddi/node-image-processor/)
+[![](https://images.microbadger.com/badges/image/suddi/node-image-processor.svg)](https://microbadger.com/images/suddi/node-image-processor)
+[![](https://images.microbadger.com/badges/version/suddi/node-image-processor:0.12.18.svg)](https://microbadger.com/images/suddi/node-image-processor:0.12.18)
+[![](https://images.microbadger.com/badges/version/suddi/node-image-processor:4.7.3.svg)](https://microbadger.com/images/suddi/node-image-processor:4.7.3)
 
 Provides node.js LTS versions on alpine-linux with the following image-processing libraries installed:
 * `libpng`
@@ -37,21 +51,29 @@ Provides node.js LTS versions on alpine-linux with the following image-processin
 
 ### [suddi/node-image-webpack-loader](https://hub.docker.com/r/suddi/node-image-webpack-loader/)
 [![suddi/node-image-webpack-loader](https://img.shields.io/docker/pulls/suddi/node-image-webpack-loader.svg)](https://hub.docker.com/r/suddi/node-image-webpack-loader/)
+[![](https://images.microbadger.com/badges/image/suddi/node-image-webpack-loader.svg)](https://microbadger.com/images/suddi/node-image-webpack-loader)
+[![](https://images.microbadger.com/badges/version/suddi/node-image-webpack-loader:4.7.3.svg)](https://microbadger.com/images/suddi/node-image-webpack-loader:4.7.3)
 
 Provides node.js LTS versions on alpine-linux with image-processing libraries for `image-webpack-loader`.
 
 ### [suddi/node-compass](https://hub.docker.com/r/suddi/node-compass/)
 [![suddi/node-compass](https://img.shields.io/docker/pulls/suddi/node-compass.svg)](https://hub.docker.com/r/suddi/node-compass/)
+[![](https://images.microbadger.com/badges/image/suddi/node-compass.svg)](https://microbadger.com/images/suddi/node-compass)
+[![](https://images.microbadger.com/badges/version/suddi/node-compass:4.7.3.svg)](https://microbadger.com/images/suddi/node-compass:4.7.3)
 
 Provides node.js LTS versions on alpine-linux with `compass` installed.
 
 ### [suddi/dynamodb-admin](https://hub.docker.com/r/suddi/dynamodb-admin/)
 [![suddi/dynamodb-admin](https://img.shields.io/docker/pulls/suddi/dynamodb-admin.svg)](https://hub.docker.com/r/suddi/dynamodb-admin/)
+[![](https://images.microbadger.com/badges/image/suddi/dynamodb-admin.svg)](https://microbadger.com/images/suddi/dynamodb-admin)
+[![](https://images.microbadger.com/badges/version/suddi/dynamodb-admin.svg)](https://microbadger.com/images/suddi/dynamodb-admin)
 
 Provides admin GUI web interface through `dynamodb-admin` for `DynamoDB` on node.js v6.9.5.
 
 ### [suddi/python-alpine](https://hub.docker.com/r/suddi/python-alpine/)
 [![suddi/python-alpine](https://img.shields.io/docker/pulls/suddi/python-alpine.svg)](https://hub.docker.com/r/suddi/python-alpine/)
+[![](https://images.microbadger.com/badges/image/suddi/python-alpine.svg)](https://microbadger.com/images/suddi/python-alpine)
+[![](https://images.microbadger.com/badges/version/suddi/python-alpine:2.7.13.svg)](https://microbadger.com/images/suddi/python-alpine:2.7.13)
 
 Provides python 2.7.13 on alpine-linux with the following libraries installed:
 * `libmemcached`
