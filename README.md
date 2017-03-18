@@ -7,41 +7,53 @@ Find the docker images at: https://hub.docker.com/u/suddi/.
 
 ## Dockerfiles
 
-### [suddi/worker](https://hub.docker.com/r/suddi/worker/)
-[![suddi/worker](https://img.shields.io/docker/pulls/suddi/worker.svg)](https://hub.docker.com/r/suddi/worker/)
-[![microbadger/worker](https://images.microbadger.com/badges/image/suddi/worker.svg)](https://microbadger.com/images/suddi/worker)
-
-Provides node.js LTS version with `zint`, `libmcrypt` and the following node.js libraries:
-* mocha
-* grunt-cli
-* bunyan
-
 ### [suddi/node](https://hub.docker.com/r/suddi/node/)
 [![suddi/node](https://img.shields.io/docker/pulls/suddi/node.svg)](https://hub.docker.com/r/suddi/node/)
 [![microbadger/node](https://images.microbadger.com/badges/image/suddi/node.svg)](https://microbadger.com/images/suddi/node)
 
-Provides node.js LTS version with some commonly used node.js libraries:
-* mocha
-* grunt-cli
-* bunyan
-* nodemon
-* repl.history
-* pm2
+Provides node.js LTS versions on ubuntu.
 
-## Usage
+### [suddi/worker](https://hub.docker.com/r/suddi/worker/)
+[![suddi/worker](https://img.shields.io/docker/pulls/suddi/worker.svg)](https://hub.docker.com/r/suddi/worker/)
+[![microbadger/worker](https://images.microbadger.com/badges/image/suddi/worker.svg)](https://microbadger.com/images/suddi/worker)
 
-To compile and push one of the docker images found in `src/`, eg. `worker`:
+Provides node.js LTS versions with `zint`, `libmcrypt` and the following node.js libraries:
+* `mocha`
+* `grunt-cli`
+* `bunyan`
 
-````
-./actions.sh compile node 4.5.0
-````
+### [suddi/node-alpine](https://hub.docker.com/r/suddi/node-alpine/)
+[![suddi/node-alpine](https://img.shields.io/docker/pulls/suddi/node-alpine.svg)](https://hub.docker.com/r/suddi/node-alpine/)
 
-To pull a docker image from DockerHub:
-````
-./actions.sh pull node
-````
+Provides node.js LTS versions on alpine-linux.
 
-To run a docker image and enter:
-````
-./actions.sh run node
-````
+### [suddi/node-image-processor](https://hub.docker.com/r/suddi/node-image-processor/)
+[![suddi/node-image-processor](https://img.shields.io/docker/pulls/suddi/node-image-processor.svg)](https://hub.docker.com/r/suddi/node-image-processor/)
+
+Provides node.js LTS versions on alpine-linux with the following image-processing libraries installed:
+* `libpng`
+* `libjpeg`
+* `sharp`
+
+### [suddi/node-image-webpack-loader](https://hub.docker.com/r/suddi/node-image-webpack-loader/)
+[![suddi/node-image-webpack-loader](https://img.shields.io/docker/pulls/suddi/node-image-webpack-loader.svg)](https://hub.docker.com/r/suddi/node-image-webpack-loader/)
+
+Provides node.js LTS versions on alpine-linux with image-processing libraries for `image-webpack-loader`.
+
+### [suddi/node-compass](https://hub.docker.com/r/suddi/node-compass/)
+[![suddi/node-compass](https://img.shields.io/docker/pulls/suddi/node-compass.svg)](https://hub.docker.com/r/suddi/node-compass/)
+
+Provides node.js LTS versions on alpine-linux with `compass` installed.
+
+### [suddi/dynamodb-admin](https://hub.docker.com/r/suddi/dynamodb-admin/)
+[![suddi/dynamodb-admin](https://img.shields.io/docker/pulls/suddi/dynamodb-admin.svg)](https://hub.docker.com/r/suddi/dynamodb-admin/)
+
+Provides admin GUI web interface through `dynamodb-admin` for `DynamoDB` on node.js v6.9.5.
+
+### [suddi/python-alpine](https://hub.docker.com/r/suddi/python-alpine/)
+[![suddi/python-alpine](https://img.shields.io/docker/pulls/suddi/python-alpine.svg)](https://hub.docker.com/r/suddi/python-alpine/)
+
+Provides python 2.7.13 on alpine-linux with the following libraries installed:
+* `libmemcached`
+* `libjpeg`
+* `mysql`
