@@ -43,7 +43,9 @@ RUN apk add --no-cache --virtual .build-deps \
 	make install && \
 	cd .. && \
 	rm -Rf "vips-$VIPS_VERSION" && \
-	rm "vips-$VIPS_VERSION.tar.gz"
+	rm "vips-$VIPS_VERSION.tar.gz" && \
+
+	curl -s https://raw.githubusercontent.com/lovell/sharp/v0.8.2/preinstall.sh | sh -
 
 # NOTE: REMEMBER TO REMOVE BUILD DEPENDENCIES
 # RUN apk del .build-deps
