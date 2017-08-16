@@ -1,6 +1,11 @@
 # BASE DOCKER IMAGE DOCKERFILE:
 # https://github.com/suddi/dockerfiles/blob/49fc98812d64e4c3556f863d9c617c4bca6002a6/src/node.Dockerfile
-FROM suddi/node:6.9.5
+#
+# docker build --tag suddi/node-pdf-worker:<NODE_VERSION> --file node-pdf-worker.Dockerfile --build-arg NODE_VERSION=<NODE_VERSION> .
+# docker push suddi/node-pdf-worker:<NODE_VERSION>
+ARG NODE_VERSION="6.9.5"
+
+FROM "suddi/node:$NODE_VERSION"
 
 MAINTAINER Sudharshan Ravindran <mail@suddi.io>
 LABEL maintainer="Sudharshan Ravindran <mail@suddi.io>" \

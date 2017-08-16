@@ -1,6 +1,11 @@
 # BASE DOCKER IMAGE DOCKERFILE:
 # https://github.com/suddi/dockerfiles/blob/49fc98812d64e4c3556f863d9c617c4bca6002a6/src/node-alpine.Dockerfile
-FROM suddi/node-alpine:4.7.3
+#
+# docker build --tag suddi/node-image-processor:<NODE_VERSION> --file node-image-processor.Dockerfile --build-arg NODE_VERSION=<NODE_VERSION> .
+# docker push suddi/node-image-processor:<NODE_VERSION>
+ARG NODE_VERSION="4.7.3"
+
+FROM "suddi/node-alpine:$NODE_VERSION"
 
 MAINTAINER Sudharshan Ravindran <mail@suddi.io>
 LABEL maintainer="Sudharshan Ravindran <mail@suddi.io>" \

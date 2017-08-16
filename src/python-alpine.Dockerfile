@@ -1,6 +1,11 @@
 # BASE DOCKER IMAGE DOCKERFILE:
 # https://github.com/docker-library/python/blob/ad4706ad7d23ef13472d2ee340aa43f3b9573e3d/2.7/alpine/Dockerfile
-FROM python:2.7.13-alpine
+#
+# docker build --tag suddi/python:2.7.13-alpine --file python-alpine.Dockerfile --build-arg PYTHON_VERSION=<PYTHON_VERSION> .
+# docker push suddi/python-alpine:<PYTHON_VERSION>
+ARG PYTHON_VERSION="2.7.13"
+
+FROM "python:$PYTHON_VERSION-alpine"
 
 MAINTAINER Sudharshan Ravindran <mail@suddi.io>
 LABEL maintainer="Sudharshan Ravindran <mail@suddi.io>" \
@@ -18,6 +23,7 @@ RUN apk add --no-cache --virtual .build-deps \
         gcc \
         g++ \
         git \
+        make \
         libjpeg-turbo-dev \
         libmemcached-dev \
         zlib-dev \
