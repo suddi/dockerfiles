@@ -1,7 +1,7 @@
 # BASE DOCKER IMAGE DOCKERFILE:
 # https://github.com/gliderlabs/docker-alpine/blob/c584d0198d5dea1c5d942e1e1a7b2504ecdb4d30/versions/library-3.5/Dockerfile
 #
-# docker build --tag suddi/node-alpine:<NODE_VERSION> --file node-alpine.Dockerfile --build-arg NODE_VERSION=<NODE_VERSION> .
+# docker build --tag suddi/node-alpine:<NODE_VERSION> --file src/node-alpine.Dockerfile --build-arg NODE_VERSION=<NODE_VERSION> .
 # docker push suddi/node-alpine:<NODE_VERSION>
 FROM alpine:3.5
 

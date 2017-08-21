@@ -1,7 +1,7 @@
 # BASE DOCKER IMAGE DOCKERFILE:
 # https://github.com/suddi/dockerfiles/blob/49fc98812d64e4c3556f863d9c617c4bca6002a6/src/node-alpine.Dockerfile
 #
-# docker build --tag suddi/node-image-processor:<NODE_VERSION> --file node-image-processor.Dockerfile --build-arg NODE_VERSION=<NODE_VERSION> .
+# docker build --tag suddi/node-image-processor:<NODE_VERSION> --file src/node-image-processor.Dockerfile --build-arg NODE_VERSION=<NODE_VERSION> .
 # docker push suddi/node-image-processor:<NODE_VERSION>
 ARG NODE_VERSION="4.7.3"
 

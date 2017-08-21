@@ -1,7 +1,7 @@
 # BASE DOCKER IMAGE DOCKERFILE:
 # https://github.com/suddi/dockerfiles/blob/8c72b1c089d1e801f0ddec1f6df207d7bbecaf92/src/node-alpine.Dockerfile
 #
-# docker build --tag suddi/node-image-webpack-loader:<NODE_VERSION> --file node-image-webpack-loader.Dockerfile --build-arg NODE_VERSION=<NODE_VERSION> .
+# docker build --tag suddi/node-image-webpack-loader:<NODE_VERSION> --file src/node-image-webpack-loader.Dockerfile --build-arg NODE_VERSION=<NODE_VERSION> .
 # docker push suddi/node-image-weboack-loader:<NODE_VERSION>
 ARG NODE_VERSION="4.7.3"
 

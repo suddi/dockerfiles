@@ -1,7 +1,7 @@
 # BASE DOCKER IMAGE DOCKERFILE:
 # https://github.com/tianon/docker-brew-ubuntu-core/blob/b6f1fe19228e5b6b7aed98dcba02f18088282f90/trusty/Dockerfile
 #
-# docker build --tag suddi/node:<NODE_VERSION> --file node.Dockerfile --build-arg NODE_VERSION=<NODE_VERSION> .
+# docker build --tag suddi/node:<NODE_VERSION> --file src/node.Dockerfile --build-arg NODE_VERSION=<NODE_VERSION> .
 # docker push suddi/node:<NODE_VERSION>
 FROM ubuntu:14.04
 
